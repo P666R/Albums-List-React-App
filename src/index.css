@@ -1,13 +1,223 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 78%, 60%);
+  --clr-gray-1: hsl(210, 22%, 49%);
+  --clr-gray-2: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red: hsl(360, 67%, 44%);
+  --clr-black: #000000;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.75rem;
+  --light-shadow: 0 5px 15px rgba(240, 240, 238, 0.7);
+  --dark-shadow: 0 5px 15px rgba(38, 38, 37, 0.7);
+  --max-width: 1170px;
+  --fixed-width: 620px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: var(--clr-black);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--clr-black);
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  padding-top: 0.25rem;
+}
+h1 {
+  font-size: 2.75rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-gray-1);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+.section-center {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  padding: 2rem;
+}
+
+.con-form h3 {
+  color: var(--clr-primary-1);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-decoration-style: solid;
+}
+.form-control {
+  display: flex;
+  justify-content: center;
+}
+.alb-form {
+  padding: 0.25rem;
+  padding-left: 1rem;
+  background: var(--clr-gray-2);
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  border-color: transparent;
+  font-size: 1rem;
+  flex: 1 0 auto;
+  color: var(--clr-gray-1);
+}
+
+.submit-btn {
+  background: var(--clr-primary-2);
+  border-color: transparent;
+  flex: 0 0 5rem;
+  display: grid;
+  align-items: center;
+  padding: 0.25rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  cursor: pointer;
+  content: var(--clr-primary-2);
+  transition: var(--transition);
+  font-size: 0.85rem;
+}
+.submit-btn:hover {
+  background: var(--clr-red);
+  color: var(--clr-white);
+}
+
+.title {
+  margin-bottom: 0;
+  color: var(--clr-black);
+  letter-spacing: 2px;
+}
+
+.con-display {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 5rem auto;
+}
+.container {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 576px) {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+.card {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  padding: 2rem 1.5rem;
+}
+
+.card h4 {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--clr-gray-1);
+  text-align: left;
+}
+
+.btn {
+  padding: 0.35rem 0.75rem;
+  letter-spacing: 1.6px;
+  font-size: 0.75rem;
+  color: var(--clr-white);
+  background: var(--clr-primary-2);
+  border-radius: var(--radius);
+  border-color: transparent;
+  text-transform: uppercase;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: var(--clr-white);
+  width: 80vw;
+  max-width: 400px;
+  border-radius: var(--radius);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.modal-container h3 {
+  color: var(--clr-red);
+}
+
+.modal h4 {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 775px) {
+  .btn-container {
+    margin: 0 auto;
+    max-width: 700px;
+  }
 }
