@@ -9,6 +9,8 @@
 
 ## Fake Server : https://jsonplaceholder.typicode.com/albums
 
+<hr/>
+
 # <div align="center">
 ![app](https://github.com/P666R/Albums-List-React-App/blob/main/public/alb.jpg)
 </div>
@@ -18,6 +20,8 @@
 # <div align="center">
 ![app1](https://github.com/P666R/Albums-List-React-App/blob/main/public/alb1.jpg)
 </div>
+
+<hr/>
 
 # Folder Structure:
 
