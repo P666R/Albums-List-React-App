@@ -60,11 +60,11 @@
 
 ## To run this project run
 
--  git clone https://github.com/
+-  git clone https://github.com/P666R/Albums-List-React-App.git
   
 ## Go to directory
 
--  cd album
+-  cd Albums-List-React-App-main
   
 ## Install all dependencies
 
