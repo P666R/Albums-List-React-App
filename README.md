@@ -7,7 +7,13 @@
 ### 3. RTK Query
 ### 4. CSS
 
-## Fake Server : https://jsonplaceholder.typicode.com/albums
+## Fake Server : https://jsonplaceholder.typicode.com/albums 
+
+# <div align="center">
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f9d577cf-79c2-4dae-916c-e09970009a57/deploy-status)](https://app.netlify.com/sites/albums-list-react-app-p666r/deploys)
+## Hosted Link: https://albums-list-react-app-p666r.netlify.app/
+</div>
+</div>
 
 <hr/>
 
